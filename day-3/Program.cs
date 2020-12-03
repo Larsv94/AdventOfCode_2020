@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
 
 namespace day_3
 {
@@ -6,7 +8,14 @@ namespace day_3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var lines = File.ReadAllText(@"./input.txt").Split("\n");
+            var treeEncounters = lines.Where((x, index) => x[(index * 3) % x.Length] == '#');
+
+
+            Console.WriteLine($"Part one: {treeEncounters.Count()}");
+
+
+            Console.ReadKey();
         }
     }
 }
