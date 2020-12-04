@@ -18,3 +18,6 @@ with open("./input.txt") as file:
 
   new_correct_passwords = [x for x in processed if complies_to_new_rule(x[0],x[1],x[2])]
   print(len(new_correct_passwords))
+
+
+#Challenge part one: dynamic regex
